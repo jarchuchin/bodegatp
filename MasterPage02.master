@@ -1,0 +1,8 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage02.master.vb" Inherits="MasterPage02" MasterPageFile="~/MasterPageBase.master" %>
+<%@ MasterType virtualPath="~/MasterPageBase.master"%>
+
+<asp:Content ID="contentMain" ContentPlaceHolderID="ContentPanelMain" Runat="Server">
+	<div class="top_morado"></div>
+
+	<asp:ContentPlaceHolder ID="ContentPanelCentral" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

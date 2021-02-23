@@ -1,0 +1,4 @@
+﻿<asp:TextBox runat="server" cssClass="txtHeader" skinid="textheader"  />
+<asp:Button runat="server" cssClass="btnGeneral" skinid="botongeneral" />
+<asp:TextBox runat="server" cssClass="text_suscripcion" skinid="text_suscripcion"  />
+

@@ -1,0 +1,136 @@
+﻿
+Partial Class controles_HeaderControl
+	Inherits System.Web.UI.UserControl
+
+	Public WriteOnly Property displaySlider As Boolean
+		Set(value As Boolean)
+			divSlider.Visible = value
+		End Set
+	End Property
+
+	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		If Not IsPostBack Then
+			colocar()
+		End If
+	End Sub
+
+	Sub colocar()
+		litscript.Text = getScript()
+
+
+		Dim cadenaPath As String = System.Configuration.ConfigurationManager.AppSettings("path") & "Buscar.aspx?"
+		txtbuscar.Attributes.Add("onkeypress", "buscarEnter(event, 1, """ & cadenaPath & """)")
+
+
+		If Not IsNothing(Session("tabla")) Then
+			lblProductos.Text = getQtyProductos()
+			lnkCarrito.NavigateUrl = "~/compras.aspx"
+			lnkCarrito.Visible = True
+		Else
+			lnkCarrito.Visible = False
+		End If
+
+
+		If Session("idOrden") > 0 Then
+			Dim myo As New tienda.Orden(CInt(Session("idOrden")))
+			'    lblMonto.Text = Format(myo.total, "c")
+			'lnkregistro.NavigateUrl = "~/sec/compras.aspx?idOrden=" & myo.idOrden
+			lnkCarrito.NavigateUrl = "~/sec/compras.aspx?idOrden=" & myo.idOrden
+		Else
+			'   lblMonto.Text = Format(0, "c")
+		End If
+
+
+		If Request("text") <> "" Then
+			txtbuscar.Text = Request("text")
+		End If
+
+		'If Request("rango") <> "" Then
+		'    drpRangoPrecios.SelectedValue = Request("rango")
+		'End If
+		Dim myc As New tienda.ConfiguracionIdioma(1, 1)
+
+		'litTelefonos.Text = myc.header
+	End Sub
+
+	Private Function getQtyProductos() As Integer
+		Dim productos As Integer = 0
+
+		Try
+			Dim tabla As DataTable = CType(Session("tabla"), DataTable)
+			productos = tabla.Rows.Count
+		Catch ex As Exception
+
+		End Try
+		Return productos
+	End Function
+
+
+	Public Function getScript() As String
+		Dim cadena As New StringBuilder
+		cadena.AppendLine("<script language=""javascript"" type=""text/javascript"">")
+		cadena.AppendLine("function buscar1(dir) {")
+		cadena.AppendLine("if (document.getElementById(""" & txtbuscar.ClientID & """).value.length >= 0) {")
+		'     cadena.AppendLine("alert(document.getElementById(""" & drpRangoPrecios.ClientID & """).value);")
+		' cadena.AppendLine("var cadena2 = ""&rango="" + document.getElementById(""" & "" & """).value; ")
+		cadena.AppendLine("var cadena = dir + ""text="" + document.getElementById(""" & txtbuscar.ClientID & """).value;  ")
+		cadena.AppendLine("window.location = cadena;")
+		cadena.AppendLine("}else{")
+		cadena.AppendLine("alert(""Coloca la palabra de busqueda en la caja de texto"");")
+		cadena.AppendLine("}")
+		cadena.AppendLine("}")
+
+		cadena.AppendLine("function buscarEnter(e, num, dir){")
+		cadena.AppendLine("var unicode=e.charCode? e.charCode : e.keyCode;")
+		cadena.AppendLine("if (unicode == 13) {")
+		cadena.AppendLine("e.returnValue=false;")
+		cadena.AppendLine("e.cancel = true;")
+		cadena.AppendLine("if (num == 1) {")
+		cadena.AppendLine("buscar1(dir);")
+		cadena.AppendLine("}")
+		cadena.AppendLine("if (num == 2){")
+		cadena.AppendLine("buscar2(dir);")
+		cadena.AppendLine("}")
+		cadena.AppendLine("}")
+		cadena.AppendLine("}")
+
+
+
+
+		cadena.Append("</script>")
+
+		'cadena.AppendLine("<script>")
+		'cadena.AppendLine("$(function () {")
+		'cadena.AppendLine("$(""#" & drpRangoPrecios.ClientID & """).jqDropDown();")
+		'cadena.AppendLine("});")
+		'cadena.AppendLine("</script>")
+
+		cadena.AppendLine("")
+		cadena.AppendLine("")
+
+
+
+		Return cadena.ToString
+	End Function
+
+
+	Public Function getCategos(ByVal clavecatego As Integer) As DataSet
+		Dim myc As New tienda.CategoriaIdioma()
+		Return myc.GetDS(CInt(Session("idIdioma")), clavecatego)
+	End Function
+	Public Function getTags(ByVal clavetags As String) As String
+		Dim cadena As String = clavetags.Replace(",", " ")
+		cadena = cadena.Replace(" ", "-")
+
+
+
+		Return cadena.ToLower
+
+
+	End Function
+
+
+	Protected Sub lnkBtnBuscar_Click(sender As Object, e As EventArgs) Handles lnkBtnBuscar.Click
+		Response.Redirect("~/buscar.aspx?text=" & txtbuscar.Text.Trim & "&rango=")
+	End Sub
+End Class

@@ -1,0 +1,22 @@
+﻿Imports System.Globalization
+Imports System.Threading
+
+
+Partial Class sec_Profile
+    Inherits System.Web.UI.Page
+
+    Protected Overrides Sub initializeculture()
+        Dim culture As String = Session("idioma")
+
+        Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture)
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(culture)
+
+
+        MyBase.initializeculture()
+
+    End Sub
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Response.Redirect("HistorialCotizaciones.aspx")
+    End Sub
+End Class

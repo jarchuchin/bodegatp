@@ -1,0 +1,49 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="HeaderControl.ascx.vb" Inherits="controles_HeaderControl" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+<%@ Register src="~/controles/DisplayAnunciosHome.ascx" tagname="DisplayAnunciosHome" tagprefix="uc1" %>
+
+                <div class="logo"><asp:HyperLink ID="lnkDefault" runat="server" NavigateUrl="~/Default.aspx"></asp:HyperLink></div>
+                <div class="login">
+                    <div class="carrito">
+						<asp:HyperLink ID="lnkCarrito" runat="server" Visible="false">
+							<asp:Label ID="lblProductos" runat="server" Text="0"></asp:Label>
+							artículos<br>en tu cotización
+						</asp:HyperLink>
+                    </div>
+                    <div id="btn_login" class="btn_login">
+						<asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/login.aspx">Accesar</asp:HyperLink>
+                    </div>
+                    <div id="btn_menu" class="btn_menu"></div>
+                </div>
+                <div class="menu_phone">
+                    <a href="../Login.aspx" id="btn_phone_login">Acceder</a>
+                    <a href="../Catalogo.aspx" id="btn_phone_catalogo">Catálogo</a>
+                    <a href="../Contacto.aspx" id="btn_phone_contactanos">Contáctanos</a>
+                    <a href="../PreguntasFrecuentes.aspx" id="btn_phone_faqs">Preguntas frecuentes</a>
+                    <a href="../Acercade.aspx" id="btn_phone_nosotros">Quiénes somos</a>
+                </div>
+                <div class="busqueda">
+                    <div class="caja_busqueda">
+						<asp:TextBox ID="txtbuscar" runat="server"></asp:TextBox>
+						<cc1:TextBoxWatermarkExtender ID="txtbuscar_watermark" runat="server" TargetControlID="txtbuscar" WatermarkText="Escriba aquí su artículo promocional" WatermarkCssClass="watermark"></cc1:TextBoxWatermarkExtender>
+                    </div>
+                    <div class="btn_busqueda">
+						<asp:LinkButton ID="lnkBtnBuscar" runat="server">Buscar</asp:LinkButton>
+                    </div>
+
+                    <div class="btn_catalogo">
+						<asp:HyperLink ID="lnkCatalogo" runat="server" NavigateUrl="~/Catalogo.aspx">VER CATÁLOGO</asp:HyperLink>
+                    </div>
+
+                    <div class="contacto">
+                        <h3>CONTACTO</h3>
+                        <div id="btn_telefono" class="btn_telefono"></div>
+                        <div id="btn_mail" class="btn_mail"></div>
+                        <div id="btn_ubicacion" class="btn_ubicacion"></div>
+                    </div>
+                </div>
+                <div id="divSlider" runat="server" visible="false" class="slider_header">
+			       <uc1:DisplayAnunciosHome ID="DisplayAnunciosHome1" runat="server" />
+                </div>
+
+  <asp:Literal ID="litscript" runat="server"></asp:Literal>

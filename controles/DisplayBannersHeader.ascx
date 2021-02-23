@@ -1,0 +1,2 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="DisplayBannersHeader.ascx.vb" Inherits="controles_DisplayBannersHeader" %>
+<asp:HyperLink ID="lnkHeader" runat="server"><asp:Image ID="imgHeader" runat="server" ImageUrl="~/images/tp_anuncio.jpg" /></asp:HyperLink><asp:HiddenField ID="hiddenPag" runat="server" />

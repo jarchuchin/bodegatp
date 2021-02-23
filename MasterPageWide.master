@@ -1,0 +1,5 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPageWide.master.vb" Inherits="MasterPageWide" MasterPageFile="~/MasterPageBase.master" %>
+
+<asp:Content ID="contentMain" ContentPlaceHolderID="ContentPanelMain" Runat="Server">
+	<asp:ContentPlaceHolder ID="ContentPanelCentral" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

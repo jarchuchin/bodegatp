@@ -1,0 +1,59 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage01.master.vb" Inherits="MasterPage01" MasterPageFile="~/MasterPageBase.master" %>
+<%@ MasterType virtualPath="~/MasterPageBase.master"%>
+
+<%@ Register Src="Controles/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+<%@ Register src="controles/MenuMisOpciones.ascx" tagname="MenuMisOpciones" tagprefix="uc6" %>
+<%@ Register src="controles/DisplayMenuLateralIzquierdo.ascx" tagname="DisplayMenuLateralIzquierdo" tagprefix="uc5" %>
+<%@ Register src="controles/Header.ascx" tagname="Header" tagprefix="uc1" %>
+
+<asp:Content ID="contentMain" ContentPlaceHolderID="ContentPanelMain" Runat="Server">
+	<div class="wrapper portada">
+		<header>
+			<uc1:Header ID="Header1" runat="server" />
+		</header>
+
+		<section>
+			<div class="menu">
+				<uc6:MenuMisOpciones ID="MenuMisOpciones1" runat="server" />
+				<uc5:DisplayMenuLateralIzquierdo ID="DisplayMenuLateralIzquierdo1" runat="server" />
+			</div>
+
+			<div class="panelCentral">
+				<asp:ContentPlaceHolder ID="ContentPanelCentral" runat="server"></asp:ContentPlaceHolder>
+			</div>
+		</section>
+            
+		<footer>
+			<uc2:Footer ID="Footer1" runat="server" />
+		</footer>
+
+	</div>
+
+	<script type="text/javascript">
+		$().ready(function () {
+			swapValuesJ = [];
+			$(".text_suscripcion").each(function (i) {
+				swapValuesJ[i] = $(this).val();
+				$(this).focus(function () {
+					if ($(this).val() == swapValuesJ[i]) {
+						$(this).val("").removeClass("watermark")
+					}
+				}).blur(function () {
+					if ($.trim($(this).val()) == "") { $(this).val(swapValuesJ[i]).addClass("watermark") }
+				})
+			})
+
+			swapValues = [];
+			$(".text_busqueda").each(function (i) {
+				swapValues[i] = $(this).val();
+				$(this).focus(function () {
+					if ($(this).val() == swapValues[i]) {
+						$(this).val("").removeClass("watermark")
+					}
+				}).blur(function () {
+					if ($.trim($(this).val()) == "") { $(this).val(swapValues[i]).addClass("watermark") }
+				})
+			})
+		});
+	</script>
+</asp:Content>

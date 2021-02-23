@@ -1,0 +1,2 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="test.ascx.vb" Inherits="controles_test" %>
+<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>

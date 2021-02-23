@@ -1,0 +1,10 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage01.master" AutoEventWireup="false" CodeFile="Infraestructura.aspx.vb" Inherits="Infraestructura" %>
+
+<%@ Register src="controles/DisplayMenuLateralIzquierdo.ascx" tagname="DisplayMenuLateralIzquierdo" tagprefix="uc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPanelIzquierdo" Runat="Server">
+    <uc1:DisplayMenuLateralIzquierdo ID="DisplayMenuLateralIzquierdo1" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPanelCentral" Runat="Server">
+</asp:Content>
+

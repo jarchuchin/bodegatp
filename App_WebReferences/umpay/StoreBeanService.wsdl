@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://icverify.um.edu.mx/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StoreBeanService" targetNamespace="http://icverify.um.edu.mx/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <ns1:Policy xmlns:ns1="http://www.w3.org/ns/ws-policy" wsu:Id="StoreBeanPortBinding_sell_WSAT_Policy">
+    <ns1:ExactlyOne>
+      <ns1:All>
+        <ns2:ATAlwaysCapability xmlns:ns2="http://schemas.xmlsoap.org/ws/2004/10/wsat">
+        </ns2:ATAlwaysCapability>
+        <ns3:ATAssertion xmlns:ns4="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:ns3="http://schemas.xmlsoap.org/ws/2004/10/wsat" ns1:Optional="true" ns4:Optional="true">
+        </ns3:ATAssertion>
+      </ns1:All>
+    </ns1:ExactlyOne>
+  </ns1:Policy>
+  <ns5:Policy xmlns:ns5="http://www.w3.org/ns/ws-policy" wsu:Id="StoreBeanPortBinding_getName_WSAT_Policy">
+    <ns5:ExactlyOne>
+      <ns5:All>
+        <ns6:ATAlwaysCapability xmlns:ns6="http://schemas.xmlsoap.org/ws/2004/10/wsat">
+        </ns6:ATAlwaysCapability>
+        <ns7:ATAssertion xmlns:ns8="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:ns7="http://schemas.xmlsoap.org/ws/2004/10/wsat" ns5:Optional="true" ns8:Optional="true">
+        </ns7:ATAssertion>
+      </ns5:All>
+    </ns5:ExactlyOne>
+  </ns5:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.16.253.213:8080/StoreBeanService/StoreBean?xsd=1" namespace="http://icverify.um.edu.mx/" />
+    </xsd:schema>
+  </types>
+  <message name="getName">
+    <part name="parameters" element="tns:getName" />
+  </message>
+  <message name="getNameResponse">
+    <part name="parameters" element="tns:getNameResponse" />
+  </message>
+  <message name="sell">
+    <part name="parameters" element="tns:sell" />
+  </message>
+  <message name="sellResponse">
+    <part name="parameters" element="tns:sellResponse" />
+  </message>
+  <portType name="StoreBean">
+    <operation name="getName">
+      <input message="tns:getName" />
+      <output message="tns:getNameResponse" />
+    </operation>
+    <operation name="sell">
+      <input message="tns:sell" />
+      <output message="tns:sellResponse" />
+    </operation>
+  </portType>
+  <binding name="StoreBeanPortBinding" type="tns:StoreBean">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getName">
+      <ns9:PolicyReference xmlns:ns9="http://www.w3.org/ns/ws-policy" URI="#StoreBeanPortBinding_getName_WSAT_Policy">
+      </ns9:PolicyReference>
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sell">
+      <ns10:PolicyReference xmlns:ns10="http://www.w3.org/ns/ws-policy" URI="#StoreBeanPortBinding_sell_WSAT_Policy">
+      </ns10:PolicyReference>
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="StoreBeanService">
+    <port name="StoreBeanPort" binding="tns:StoreBeanPortBinding">
+      <soap:address location="http://172.16.253.213:8080/StoreBeanService/StoreBean" />
+    </port>
+  </service>
+</definitions>

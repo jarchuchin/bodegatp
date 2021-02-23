@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://icverify.um.edu.mx/" targetNamespace="http://icverify.um.edu.mx/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getName" type="tns:getName" />
+  <xs:element name="getNameResponse" type="tns:getNameResponse" />
+  <xs:element name="sell" type="tns:sell" />
+  <xs:element name="sellResponse" type="tns:sellResponse" />
+  <xs:complexType name="getName">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sell">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element minOccurs="0" name="arg3" type="xs:string" />
+      <xs:element minOccurs="0" name="arg4" type="xs:string" />
+      <xs:element minOccurs="0" name="arg5" type="xs:string" />
+      <xs:element minOccurs="0" name="arg6" type="xs:string" />
+      <xs:element minOccurs="0" name="arg7" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sellResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

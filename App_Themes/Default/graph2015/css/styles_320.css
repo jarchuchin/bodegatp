@@ -1,0 +1,644 @@
+@media only screen and (max-width : 767px) {
+
+.wrapper{
+	width: 320px;
+}
+
+header{
+	background-position: 10px 3%;
+}
+
+header .caja_busqueda{
+	left: 10px;
+	width: 220px;
+}
+.text_busqueda{
+	left: 10px;
+	width: 220px;
+}
+
+header .caja_busqueda #txt_busqueda{
+	width: 204px;
+}
+
+header .btn_busqueda{
+	left: 230px;
+}
+
+header .slider_header {
+	width: 100%;
+	height: 140px;
+}
+
+header .imagen_grande img{
+	height: auto;
+	width: 320px;
+}
+
+header .login .carrito, header .login .btn_login, header .login .btn_logout, header .busqueda .btn_catalogo,
+header .slider_header .imagen_chica, .portada .slider_rotativo, .portada .slider_promo,
+.portada .video, footer .subscripcion, footer > div.links, footer .logos,
+header .busqueda .contacto
+{
+	display: none;
+}
+
+header .btn_menu{
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.menu{
+	width: 320px;
+	min-width: 320px;
+}
+
+.menu > h2{
+	margin: 20px auto;
+	text-align: center;
+}
+
+.menu .menu_articulos li a{
+	font-size: 1em;
+	margin-bottom: 5px;
+}
+
+footer .contacto{
+	float: none;
+	margin: 0 auto;
+	width: 80%;
+}
+
+footer .sociales{
+	float: none;
+	margin: 0 auto;
+	width: 40%;
+	margin-bottom: 30px;
+}
+
+footer .logo{
+	display: none;
+}
+
+footer .copy{
+	display: block;
+	text-align: center;
+	margin: 20px;
+	color: #666666;
+    font-size: 14px;
+}
+
+
+/* CATALOGO */
+
+.productos{
+	width: 320px;
+	text-align: center;
+}
+
+.productos h2{
+	width: 100%;
+	text-align: center;
+	font-weight: normal;
+}
+
+.listado {
+	width: 320px;
+}
+
+.listado ul{
+	width: 223px;
+	height: auto;
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+}
+
+.listado >ul>li{
+    margin: 20px auto;
+}
+
+/* RESULTADO */
+
+.productos_busqueda{
+	width: 320px;
+	text-align: center;
+}
+
+.resultado .listado_busqueda {
+	width: 320px;
+}
+
+.resultado .listado_busqueda ul{
+	width: 223px;
+	height: auto;
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+}
+
+.paginacion > ul{
+	padding-left:40px;
+}
+
+.resultado .listado_busqueda  ul li{
+    margin: 20px auto;
+}
+
+.resultado .producto_busqueda{
+	margin-left: 45px;
+}
+
+.resultado .productos_busqueda .filtros_controles li{
+	display: none;
+}
+
+.resultado .filtros_controles .slider{
+	width: 200px;
+	margin-left: 50px;
+	display: block !important;
+}
+
+/* INICIO */
+
+.inicio header{
+    height: 200px;
+    background: url('../img/logo_slogan.png') no-repeat center 40px;
+}
+
+.inicio header .busqueda{
+    width: 300px;
+    top: 100px;
+}
+
+.inicio header .caja_busqueda{
+    width: 204px;
+}
+
+.inicio header #txt_busqueda{
+    width: 180px;
+}
+
+.inicio header .btn_busqueda{
+    left: 210px;
+}
+
+.inicio section{
+    width: 320px;
+}
+
+.inicio section h2{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.inicio section .slider_buscados{
+    width: 320px;
+}
+
+.inicio section .slider_buscados ul{
+    margin: 0px 0px 0px 75px;
+}
+
+.inicio section .slider_buscados .slider_ant{
+    left: 40px;
+}
+
+.inicio section .slider_buscados .slider_sig{
+    right: 40px;
+}
+
+.inicio footer{
+    width: 300px;
+}
+
+.inicio footer .menu_articulos{
+	-webkit-column-count:1;
+    -moz-column-count:1;
+    -ms-column-count:1;
+    -o-column-count:1;
+    column-count:1;
+    -webkit-column-gap:15px;
+    -moz-column-gap:15px;
+    -ms-column-gap:15px;
+    -o-column-gap:15px;
+    column-gap:15px;
+    columns:3;
+    margin-left: 50px;
+}
+
+.inicio footer .copy{
+    margin-bottom: 50px;
+    color: #666666;
+    font-size: 14px;
+}
+
+/* COTIZADOR */
+
+.wrapper.cotizador {
+    max-width: 300px;
+}
+
+.cotizador .datos .usuario{
+	display: none;
+}
+.cotizador .datos{
+	width: 100%;
+}
+.cotizador .datos .carro{
+	background: none;
+	margin: 70px auto;
+	width: 100%;
+	text-align: center;
+}
+
+.cotizador section .pasos ul{
+	border: none;
+}
+
+.cotizador section .pasos ul li{
+	width:93px;
+	margin-right: 5px;
+}
+
+.cotizador .pasos table th:nth-child(3),
+.cotizador .pasos table th:nth-child(4),
+.cotizador .pasos table th:nth-child(5),
+.cotizador .pasos table th:nth-child(6),
+.cotizador .pasos table td:nth-child(3),
+.cotizador .pasos table td:nth-child(4),
+.cotizador .pasos table td:nth-child(5),
+.cotizador .pasos table td:nth-child(6){
+    display: none;
+}
+
+.cotizador .pasos table td:nth-child(1){
+    width: 120px;
+}
+
+
+.cotizador .botones .btn_salir, .cotizador .botones .btn_MasProductos{
+	margin-bottom: 30px;
+}
+
+
+}
+
+@media only screen and (max-width : 400px) {
+
+/* LOGIN */
+
+.wrapper.registro{
+	width: 250px;
+}
+.registro .nuevos{
+	margin-left: 10px;
+}
+.registro .registrados .enter_login, .registro .nuevos .enter_login{
+	margin: 0;
+}
+
+.registro .registrados{
+	border-right:none;
+	min-height: auto !important;
+	margin-left: 10px;
+	height: auto !important;
+}
+
+.registro .registrados a{
+	text-align: left;
+}
+
+.registro input[type=text],.registro input[type=password],.registro select{
+	width: 200px;
+}
+
+.registro select{
+	width: 180px;
+}
+
+.registro #edad{
+	width: 152px;
+}
+
+.registro #estado{
+	width: 142px;
+}
+
+/* CONTACTANOS */
+
+body .contactanos{
+	width: 100%
+}
+
+.wrapper.contactanos{
+	width: 100%;
+	background: none;
+}
+
+.contactanos .datos,.contactanos .mensaje{
+	display: block;
+}
+
+.contactanos .mensaje{
+	margin-left: 0px;
+}
+
+.contactanos .mapa{
+	display: none;
+}
+.contactanos .oficinas ul{
+	width: 100%;
+}
+.contactanos .oficinas ul li{
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+
+.contactanos span{
+	display: none;
+}
+
+
+/* FAQS */
+
+.wrapper.faqs{
+	width: 250px;
+	background: none;
+	margin: 0 auto;
+}
+.faqs{
+	width: 100%;
+}
+
+.faqs ul{
+	font-size: .5em;
+	width: 100%;
+
+}
+
+.faqs li.pregunta{
+	font-size: 13px;
+}
+
+
+/* NOSOTROS */
+
+.nosotros{
+	width: 280px;
+}
+
+
+.slider{
+	width: 280px;
+	margin: 0 auto;
+}
+
+.nosotros .slider_nosotros{
+	width: 280px;
+	height: 102px;
+}
+
+.nosotros .slider_nosotros li{
+	width: 280px;
+	height: 102px;
+}
+
+.nosotros .slider_nosotros li .slider_texto{
+	height: 25px;
+}
+
+.nosotros .slider_nosotros li .slider_texto span{
+    font-size: 10px;
+    text-align: center;
+    padding-top: 0px;
+    width: 100%;
+}
+
+.nosotros .slider_nosotros li .slider_imagen{
+    float: right;
+    width: 280px !important;
+	height: 102px !important;
+    
+}
+
+.nosotros .slider_nosotros li .slider_imagen img{
+	width: 280px !important;
+	height: 102px !important;
+}
+
+.nosotros .nosotros_contenido div{
+    display: block;
+}
+
+.nosotros .nosotros_social ul{
+    width: 280px;
+    margin: 0 auto;
+}
+
+.nosotros .nosotros_contenido .nosotros_texto{
+	width: 90%;
+	font-size: .9em;
+	margin-right: 0px;
+}
+
+
+/* PRODUCTO */
+
+
+
+
+.producto{
+    width: 320px;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.producto .imagen{
+     -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+
+.producto .cotizar{
+   -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+
+.producto .descripcion{
+     -webkit-box-ordinal-group: 4;
+    -moz-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    margin:0;
+}
+
+.producto .articulos_vistos{
+    display: none;
+}
+
+.producto,.producto .imagen{
+	width: 100%;
+}
+
+.producto .imagen_grande,.producto .imagen_grande img{
+	width: 265px;
+	height: 265px;
+}
+
+.producto .imagen_chica,.producto .imagen_chica img{
+	width: 56px;
+	height: 56px;
+}
+
+.producto .cotizar, .producto .cotizar .calculadora{
+	width: 80%;
+	margin: 10px auto;
+}
+
+.producto .cotizar .calculadora table{
+	width: 100%;
+}
+
+.producto .cotizar .calculadora input{
+	width: 60px;
+}
+
+.producto .nosotros_social{
+	
+}
+
+.producto .cotizar .btn_cotizar{
+	width: 250px;
+}
+
+.producto .cotizar .lista_deseos a{
+   margin-left: 10px
+}
+
+.producto .nosotros_social ul{
+    margin-left: 10px
+}
+
+.producto .descripcion{
+ width: 100%;
+}
+
+.producto .ayuda{
+    display: none;
+}
+
+.producto .titulo_phone{
+	display: block;
+}
+
+.producto .titulo_phone h2{
+	padding: 0;
+	margin: 0;
+	font-family: 'cabinbold', arial, serif;
+	color: #673693;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+
+.producto .titulo_phone p.clave{
+	font-family: 'calibriregular', arial, serif;
+	color: #999999;
+	font-size: 10px;
+}
+
+
+/*** BOTONES *****/
+
+
+#anterior_ventana span,#siguiente_ventana span{
+	display: none;
+}
+
+#anterior_ventana, #siguiente_ventana{
+	position: absolute;
+	top: -50px;
+	width: 40px;
+	height: 40px;
+	border-radius: 9px;
+	font-family: arial,serif;
+	color: #666666;
+	font-size: 12px;
+	right: 150px;
+	background: url(../img/atras_naranja.png) #ffffff no-repeat 5px center;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#siguiente_ventana{
+	background: url(../img/adelante_naranja.png) #ffffff no-repeat 10px center;
+	right: 100px;
+}
+
+
+
+}
+
+

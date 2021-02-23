@@ -1,0 +1,14 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPageCotizador.master.vb" Inherits="MasterPageCotizador" MasterPageFile="~/MasterPageBase.master" %>
+
+<asp:Content ID="contentMain" ContentPlaceHolderID="ContentPanelMain" Runat="Server">
+    <div class="top_morado"></div>
+
+	<div class="wrapper cotizador">
+	<asp:ContentPlaceHolder ID="ContentPanelCentral" runat="server"></asp:ContentPlaceHolder>
+		<footer>
+			<div class="copy">
+				¿Necesitas asistencia? llama al 01800 702 0505 de lunes a viernes de 9 a 6 pm.
+			</div>
+		</footer>
+	</div>
+</asp:Content>

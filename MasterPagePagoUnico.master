@@ -1,0 +1,122 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPagePagoUnico.master.vb" Inherits="MasterPagePagoUnico" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Src="Controles/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<%@ Register src="controles/DisplayMenuLateralIzquierdo.ascx" tagname="DisplayMenuLateralIzquierdo" tagprefix="uc5" %>
+<%@ Register Src="Controles/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+   <title></title>
+    <meta name="Owner" content="contacto@todopromocional.com"/>
+    <meta name="Revisit" content="1 days"/>
+    <meta name="revisit-after" content="1 days"/>
+    <meta name="OPERATOR" content=" todopromocional articulos promocionales "/>
+    <meta name="DEVELOPER" content="TODOPROMOCIONAL DEV STAFF"/>
+    <meta name="LM-ID" content=" todopromocional articulos promocionales "/>
+    <meta name="COLLTITLE" content=" todopromocional articulos promocionales "/>
+    <meta name="COLLSUBN" content=" todopromocional articulos promocionales "/>
+    <meta name="COLLNAME" content=" todopromocional articulos promocionales "/>
+    <meta name="Rating" content="General"/>
+    <meta name="distribution" content="Global"/>
+    <meta name="Copyright" content="Copyright ø Todopromocional" />
+    <meta name="Classification" content="COMERCIAL" />
+    <meta name="Author" content="todopromocional articulos promocionales" />
+    <meta name="Robots" content="all" />
+    <meta name="Language" content="Spanish" />
+    <meta name="websitejudge-verify" content="3901f0a075fa09ea8068772c37a8b185" />
+
+	<asp:Literal id="litGoogleH" runat="server"></asp:Literal>
+	<asp:Literal id="litFacebook" runat="server"></asp:Literal>
+	<asp:Literal id="litScript" runat="server"></asp:Literal>
+
+	<script type="text/javascript">
+
+		//var _gaq = _gaq || [];
+		//_gaq.push(['_setAccount', 'UA-1330415-1']);
+		//_gaq.push(['_trackPageview']);
+		//setTimeout("_gaq.push(['_trackEvent', '10_seconds', 'read'])", 10000);
+
+		//(function () {
+		//	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		//	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		//	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		//})();
+
+		function enviar() {
+			var forma = document.getElementById("aspnetForm");
+			forma.action = "https://eps.banorte.com/payworkshosted3Dsecure/index.jsp";
+			<%--forma.action = "BancoTest.aspx";--%>
+			forma.submit();
+		}
+	</script>
+
+	<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+	
+	<link rel="stylesheet" href="App_Themes/Default/graph2015/css/normalize.min.css" />
+	<link rel="stylesheet" href="App_Themes/Default/graph2015/css/main.css" />
+	<link rel="stylesheet" href="App_Themes/Default/graph2015/css/styles.css" />
+	<link rel="stylesheet" href="App_Themes/Default/graph2015/css/styles_768.css" />
+	<link rel="stylesheet" href="App_Themes/Default/graph2015/css/styles_320.css" />
+	<link rel="stylesheet" href="App_Themes/Default/graph2015/css/fonts/fonts.css" />
+	<link rel="stylesheet" href="http://www.ideaspromocionales.com/graph2015/js/vendor/fancybox/jquery.fancybox.css" />
+	<script src="graph2015/js/vendor/modernizr-2.6.2.min.js" type="text/javascript"></script>
+
+
+	<!-- bin/jquery.slider.min.css -->
+	<link rel="stylesheet" href="graph2015/js/vendor/jsslider/css/jslider.css" type="text/css" />
+	<link rel="stylesheet" href="graph2015/js/vendor/jsslider/css/jslider.blue.css" type="text/css" />
+	<link rel="stylesheet" href="graph2015/js/vendor/jsslider/css/jslider.plastic.css" type="text/css" />
+	<link rel="stylesheet" href="graph2015/js/vendor/jsslider/css/jslider.round.css" type="text/css" />
+	<link rel="stylesheet" href="graph2015/js/vendor/jsslider/css/jslider.round.plastic.css" type="text/css" />
+	<!-- end -->
+
+</head>
+
+<body class="bg">
+
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P82WNZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-P82WNZ');</script>
+<!-- End Google Tag Manager -->
+	<form enctype="multipart/form-data" id="mainForm" runat="server" method="post">
+
+		<asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="Server" EnableScriptGlobalization="true" EnableScriptLocalization="true" CombineScripts="false">
+			<Scripts></Scripts>
+		</asp:ToolkitScriptManager>
+
+        <div class="wrapper portada">
+            <header>
+				<uc1:Header id="Header1" runat="server" />
+			</header>
+            
+            <section>
+                <div class="menu">
+					<uc5:DisplayMenuLateralIzquierdo ID="DisplayMenuLateralIzquierdo1" runat="server" />
+                </div>
+
+				<div class="panelCentral">
+					<asp:ContentPlaceHolder ID="ContentPanelCentral" runat="server"></asp:ContentPlaceHolder>
+				</div>
+            </section>
+            
+            <footer>
+				<uc2:Footer ID="Footer1" runat="server" /> 
+            </footer>
+
+        </div>
+
+	</form>
+</body>
+</html>
+
