@@ -84,7 +84,7 @@
           </div>
           <div class="row">
             
-              <div class="col-xs-12" >
+              <div class="col-xs-12" id="divbuscar2" runat="server" >
 
                   
                     <div class="navbar-form form-inline" style=" width:100%; margin-top:20px;" >   
@@ -134,7 +134,7 @@
                 </div>
                 <div class="col-sm-5" >
 
-                        <div class="navbar-form form-inline" style="display: inline-block;  width:100%;  margin-top:25px;" >   
+                        <div class="navbar-form form-inline" style="display: inline-block;  width:100%;  margin-top:25px;"  id="divbuscar" runat="server">   
                             <div class="form-group" style="display:inline; ">
                                 <div class="input-group" style="display:table;Width:355px;">
                            
@@ -181,7 +181,7 @@
                 </div>
                 <div class="col-md-5" >
 
-                        <div class="navbar-form form-inline" style="display: inline-block;  width:100%;  margin-top:25px;" >   
+                        <div class="navbar-form form-inline" style="display: inline-block;  width:100%;  margin-top:25px;" id="divbuscar3" runat="server" >   
                             <div class="form-group" style="display:inline; ">
                                 <div class="input-group" style="display:table;Width:355px;">
                            

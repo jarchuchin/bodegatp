@@ -110,6 +110,12 @@ Partial Class Controles_Header
         dtlCategorias2.DataSource = ds
         dtlCategorias2.DataBind()
 
+        If CInt(Session("idUserProfile")) = 0 Then
+            divbuscar.Visible = False
+            divbuscar2.Visible = False
+            divbuscar3.Visible = False
+        End If
+
 
     End Sub
 
