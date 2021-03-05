@@ -12,7 +12,11 @@ Partial Class _Default
 
         Page.Title = "Articulos Promocionales | TodoPromocional.com"
         '     Master.displaySlider = True
-       
+
+
+        If CInt(Session("idUserProfile")) = 0 Then
+            Response.Redirect("Login.aspx")
+        End If
     End Sub
 
 

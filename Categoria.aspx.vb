@@ -16,8 +16,14 @@ Partial Class Categoria
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+        If CInt(Session("idUserProfile")) = 0 Then
+            Response.Redirect("Login.aspx")
+        End If
+
+
         If Not IsPostBack Then
-            colocardatos()
+            colocarDatos()
         End If
     End Sub
 

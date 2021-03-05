@@ -20,9 +20,9 @@ Partial Class Controles_Header
         Dim myci As New tienda.ConfiguracionIdioma(1, 1)
 
         Dim logo As String = "~/images/logo2019.jpg"
-        If myci.logoPrincipal <> "" Then
-            logo = System.Configuration.ConfigurationManager.AppSettings("carpetafiles") & "logos/" & myci.logoPrincipal
-        End If
+        'If myci.logoPrincipal <> "" Then
+        '    logo = System.Configuration.ConfigurationManager.AppSettings("carpetafiles") & "logos/" & myci.logoPrincipal
+        'End If
 
         Image2.ImageUrl = logo
         imglogo.ImageUrl = logo

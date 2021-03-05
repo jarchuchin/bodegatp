@@ -31,7 +31,13 @@ Partial Class Producto
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		cargarProducto()
 
-		If Not IsPostBack Then
+
+        If CInt(Session("idUserProfile")) = 0 Then
+            Response.Redirect("Login.aspx")
+        End If
+
+
+        If Not IsPostBack Then
 			idIdioma = CInt(Session("idIdioma"))
 			getIdUserProfile()
 			colocardatos()
