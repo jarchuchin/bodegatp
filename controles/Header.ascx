@@ -9,7 +9,7 @@
 
 
 
-    <div class="container" style="height:25px; background-color:#3F2566;" runat="server" id="barraLogin" >
+    <div class="container" style="height:25px; background-color:#0087CB;" runat="server" id="barraLogin" >
        
         <div class="row" style="margin-top:3px;" >
                 <div class="col-md-3 col-xs-8"><asp:Label ID="lblbienvenido" runat="server" Text="Bienvenido"></asp:Label></div>
@@ -18,7 +18,7 @@
           </div>
     </div>
 
-    <div class="container hidden-xs" style="background-color:#3F2566">
+    <div class="container hidden-xs" style="background-color:#0087CB">
         <div style="height:40px; padding-top:13px; padding-left:35px; padding-right:35px;" class="row">
             <div class="col-sm-8 telefono">
                      <b>Whatsapp:</b>  <a href="tel:+528117649645" class="telefono" >+52 811 7649645</a>&nbsp;&nbsp;
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-     <div class="container hidden-sm hidden-md hidden-lg" style="background-color:#3F2566">
+     <div class="container hidden-sm hidden-md hidden-lg" style="background-color:#0087CB">
         <div style="height:60px; padding-top:13px;" class="row">
           
             <div class="col-xs-12 telefono text-center">

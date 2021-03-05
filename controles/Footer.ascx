@@ -39,7 +39,7 @@
     <div class="row">
             <div class="col-md-4">
                  <div style="height:5px;"></div>
-                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/login.aspx" ImageUrl="~/images/LOGOfootertp.png">
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/login.aspx" ImageUrl="~/images/logo2019.jpg">
                 </asp:HyperLink>
             </div>
             <div class="col-md-8">
@@ -59,7 +59,7 @@
         
         <div class=" " style="text-align:center;">
            
-                <asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="~/login.aspx" ImageUrl="~/images/LOGOfootertp.png"></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="~/login.aspx" ImageUrl="~/images/logo2019.jpg"></asp:HyperLink>
 
         </div>
 
@@ -303,7 +303,7 @@
         <div style="height:30px;"></div>
 
 
-        <div class="container" style="background-color:#3F2566">
+        <div class="container" style="background-color:#0087CB">
                <div style="padding-top:5px; padding-left:35px; padding-right:35px;" class="row">
                     <div class="row">
                         <div class="col-sm-12 inline text-center">

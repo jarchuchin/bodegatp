@@ -5,10 +5,10 @@ html,body{
 }
 
 a {
-    color: #342252;
+    color: #0087CB;
 }
     a:hover {
-        color: #342252;
+        color: #0087CB;
         text-decoration: underline;
     }
 
@@ -416,13 +416,11 @@ footer > div.links {
       padding:10px;
 }
 
-footer .links  > h2{
-
-	font-size: 13px;
-	color: #3F2565;
-	
-	padding-bottom: 5px;
-	font-weight: bold;
+footer .links > h2 {
+    font-size: 13px;
+    color: #0087CB;
+    padding-bottom: 5px;
+    font-weight: bold;
 }
 footer .links  > ul{
 	padding: 0;
@@ -2527,18 +2525,14 @@ si-border {
 
 
 h3 {
-color:#3F2565;
-
-
+    color: #0087CB;
 }
 
 h1 {
-color:#3F2565;
-
+    color: #0087CB;
 }
 h2 {
-color:#3F2565;
-
+    color: #0087CB;
 }
 
 
@@ -2713,12 +2707,11 @@ a.telefono {
 }
 
 .labeldesde {
-    color: #342252;
-
+    color: #444444;
 }
 a.productoElemento {
     cursor: pointer;
-    Color: #342252;
+    Color: #0087CB;
     font-weight: bold;
     font-size: 15px;
 }
