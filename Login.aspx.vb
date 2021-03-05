@@ -109,7 +109,7 @@ Partial Class Login
 
                             End If
                             'cadenaredireccion &= "sec/HistorialCotizaciones.aspx"
-                            Response.Redirect("~/sec/HistorialCotizaciones.aspx")
+                            Response.Redirect("~/Default.aspx")
                         End If
 
                         hiddenValidation.Value = 1
